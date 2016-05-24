@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -143,9 +145,6 @@ public class PointwiseLearner extends Learner {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		/*
-		 * @TODO: Your code here
-		 */
 		return model;
 	}
 
@@ -153,7 +152,17 @@ public class PointwiseLearner extends Learner {
 	public TestFeatures extractTestFeatures(String test_data_file,
 			Map<String, Double> idfs) {
 		
-		TestFeatures t_features = new TestFeatures();
+		ArrayList<Attribute> attributes = new ArrayList<Attribute>();
+		attributes.add(new Attribute("url_w"));
+		attributes.add(new Attribute("title_w"));
+		attributes.add(new Attribute("header_w"));
+		attributes.add(new Attribute("anchor_w"));
+		attributes.add(new Attribute("body_w"));
+		attributes.add(new Attribute("relevance_score"));
+		Instances dataset = null;
+		dataset = new Instances("train_dataset", attributes, 0);
+		
+		TestFeatures t_features = new TestFeatures(dataset);
 		Map<Query,List<Document>> train_data = null;
 		try {
 			train_data = Util.loadTrainData(test_data_file);			
@@ -161,16 +170,23 @@ public class PointwiseLearner extends Learner {
 			e.printStackTrace();
 		}
 		
+		int index = 0;
 		for (Query q : train_data.keySet()) {
+			t_features.addQuery(q.query);
 			List<Document> docs = train_data.get(q);
-			Map<String, Integer> urlScores = new HashMap<String, Integer>();
 			for (Document d : docs) {
 				double instance[] = get_tfidfs(d, idfs, q);
 				instance[5] = 1.0;
+//				System.out.print("Url: " + d.url + " - [");
+//				for (int i = 0; i < instance.length; i++) {
+//					System.out.print(instance[i] + ", ");
+//				}
+//				System.out.println("]");
 				Instance inst = new DenseInstance(1.0, instance); 
 				t_features.features.add(inst);
-			}
-			
+				t_features.addFeatureIndex(q.query, d.url, index);
+				index ++;
+			}	
 		}
 		
 		return t_features;
@@ -180,11 +196,33 @@ public class PointwiseLearner extends Learner {
 	public Map<String, List<String>> testing(TestFeatures tf,
 			Classifier model) {
 		
-		for (int i = 0; i < tf.features.size(); i++) {
-			
+		Map<String, List<String>> rankedQueries = new HashMap<String, List<String>>();
+		for (String q : tf.queries) {
+			Map<String, Integer> q_indexes = tf.getIndexes(q);
+			List<Pair<String, Double>> ranks = new ArrayList<Pair<String, Double> > ();
+			for (String url : q_indexes.keySet()) {
+				try {
+					Double rel = model.classifyInstance(tf.features.instance(q_indexes.get(url)));
+					Pair<String, Double> relPair = new Pair<String, Double>(url, rel);
+					ranks.add(relPair);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			Collections.sort(ranks, new Comparator<Pair<String,Double> >() {
+				public int compare(Pair<String, Double> one , Pair<String,Double> two) {
+			          double diff =  one.getSecond()*1000 - two.getSecond()*1000;
+			          return (int)-diff;
+			    }
+			});
+			List<String> finalRanks = new ArrayList<String>();
+			for (Pair<String, Double> p : ranks) {
+				finalRanks.add(p.getFirst());
+			}
+			rankedQueries.put(q, finalRanks);
 		}
 		
-		return null;
+		return rankedQueries;
 	}
 
 }
