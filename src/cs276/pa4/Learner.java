@@ -12,7 +12,7 @@ import weka.core.Instances;
  */
 public abstract class Learner {	
 	
-	String[] TFTYPES = {"url","title","body","header","anchor"};
+	
 	
 	public static boolean isLinearKernel=false;
  	/* Construct training features matrix */

@@ -1,0 +1,13 @@
+urlweight 0.5
+titleweight 0.9
+bodyweight 0.3
+headerweight 0.7
+anchorweight 0.5
+burl 0.1
+btitle 0.1
+bheader 0.2
+bbody 0.7
+banchor 0.2
+k1 10.0
+pageRankLambda 3.0
+pageRankLambdaPrime 0.1

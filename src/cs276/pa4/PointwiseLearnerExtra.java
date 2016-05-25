@@ -29,7 +29,7 @@ import weka.core.Instances;
 public class PointwiseLearnerExtra extends Learner {
 
 	
-	
+	String[] TFTYPES = {"url","title","header","anchor","body"};
 	@Override
 	public Instances extractTrainFeatures(String train_data_file,
 			String train_rel_file, Map<String, Double> idfs) {
@@ -82,15 +82,19 @@ public class PointwiseLearnerExtra extends Learner {
 		for (Query q : train_data.keySet()) {
 			List<Document> docs = train_data.get(q);
 			for (Document d : docs) {
-				double instance[] = get_tfidfs(d, idfs, q);
-				instance[5] = d.page_rank;
-				instance[6] = get_url_depth( d );		
-				instance[7] = d.headers.size(); // count num headers
-				instance[8] = d.anchors.size(); // count num anchors
-				instance[9] = d.body_length; // body length
-				instance[10] = scorer.getSimScore( d , q );  //BM25 score from pset 3 
-				instance[11] = rel_data.get(q.query).get(d.url);
-				Instance inst = new DenseInstance(1.0, instance); 
+				ArrayList<Double> instance = get_tfidfs(d, idfs, q);
+				instance.add((double)d.page_rank);
+				instance.add(get_url_depth( d ));
+				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
+				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
+				instance.add((double)d.body_length); // body length
+				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
+				instance.add(rel_data.get(q.query).get(d.url));
+				double[] instancearr = new double[instance.size()];
+				for (int i = 0 ; i < instance.size(); i++) {
+					instancearr[i] = instance.get(i);
+				}
+				Instance inst = new DenseInstance(1.0, instancearr); 
 				dataset.add(inst);
 			}
 			
@@ -109,34 +113,40 @@ public class PointwiseLearnerExtra extends Learner {
 
 	
 	//"url","title","body","header","anchor"
-	private double[] get_tfidfs(Document d, Map<String, Double> idfs, Query q) {
+	private ArrayList<Double> get_tfidfs(Document d, Map<String, Double> idfs, Query q) {
 //		Map<String, Double> tf_idfs = new HashMap<String, Double>();
-		double[] tf_idfs = new double[12]; // adding features 
+		//double[] tf_idfs = new double[12]; // adding features 
+		ArrayList<Double> tf_idfs = new ArrayList<Double>();
 		for (String type : this.TFTYPES) {
 			if (type.equals("url")){
 				List<String> urlWords = Parser.parseUrlString(d.url);
 				Double urlWeight = this.getListTfIdf(urlWords, idfs, q);
-				tf_idfs[0] = urlWeight;
+//				tf_idfs[0] = urlWeight;
+				tf_idfs.add(urlWeight);
 			}
 			if (type.equals("title")) {
 				List<String> titleWords = Parser.parseTitle(d.title);
 				Double titleWeight = this.getListTfIdf(titleWords, idfs, q);
-				tf_idfs[1] = titleWeight;
+//				tf_idfs[1] = titleWeight;
+				tf_idfs.add(titleWeight);
 			}
 			if (type.equals("header")) {
 				List<String> headerWords = Parser.parseHeaders(d.headers);
 				Double headerWeight = this.getListTfIdf(headerWords, idfs, q);
-				tf_idfs[2] = headerWeight;
+//				tf_idfs[2] = headerWeight;
+				tf_idfs.add(headerWeight);
 			}
 			if (type.equals("anchor")) {
 				Map<String, Integer> counts = Parser.parseAnchors(d.anchors);
 				Double anchorWeight = this.getMapTfIdf(counts, idfs, q);
-				tf_idfs[3] = anchorWeight;
+//				tf_idfs[3] = anchorWeight;
+				tf_idfs.add(anchorWeight);
 			}
 			if (type.equals("body")) {
 				Map<String, Integer> counts = Parser.parseBody(d.body_hits);
 				Double bodyWeight = this.getMapTfIdf(counts, idfs, q);
-				tf_idfs[4] = bodyWeight;
+//				tf_idfs[4] = bodyWeight;
+				tf_idfs.add(bodyWeight);
 			}
 		}
 		return tf_idfs;
@@ -192,6 +202,15 @@ public class PointwiseLearnerExtra extends Learner {
 		attributes.add(new Attribute("header_w"));
 		attributes.add(new Attribute("anchor_w"));
 		attributes.add(new Attribute("body_w"));
+		//Made changes to original here.
+		attributes.add(new Attribute("pagerank"));
+		attributes.add(new Attribute("urlDepth"));
+		attributes.add(new Attribute("numHeaders"));
+		attributes.add(new Attribute("numAnchors"));
+		attributes.add(new Attribute("bodyLength"));
+		attributes.add(new Attribute("totalLength"));
+		
+		
 		attributes.add(new Attribute("relevance_score"));
 		Instances dataset = null;
 		dataset = new Instances("train_dataset", attributes, 0);
@@ -204,19 +223,37 @@ public class PointwiseLearnerExtra extends Learner {
 			e.printStackTrace();
 		}
 		
+		Map<Query, Map<String, Document>> queryDict = new HashMap<Query, Map<String,Document>>();
+		for (Query q_ : train_data.keySet()) {
+			queryDict.put( q_ , new HashMap<String,Document>() );
+			List<Document> docs_ = train_data.get(q_ );
+			for (Document d : docs_) {
+				queryDict.get(q_).put( d.url , d );
+			}
+		}
+		
+		AScorer scorer = new BM25Scorer(idfs, queryDict);
+		
+		
+		
 		int index = 0;
 		for (Query q : train_data.keySet()) {
 			t_features.addQuery(q.query);
 			List<Document> docs = train_data.get(q);
 			for (Document d : docs) {
-				double instance[] = get_tfidfs(d, idfs, q);
-				instance[5] = 1.0;
-//				System.out.print("Url: " + d.url + " - [");
-//				for (int i = 0; i < instance.length; i++) {
-//					System.out.print(instance[i] + ", ");
-//				}
-//				System.out.println("]");
-				Instance inst = new DenseInstance(1.0, instance); 
+				ArrayList<Double> instance = get_tfidfs(d, idfs, q);
+				instance.add((double)d.page_rank);
+				instance.add(get_url_depth( d ));
+				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
+				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
+				instance.add((double)d.body_length); // body length
+				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
+				instance.add(1.0);
+				double[] instancearr = new double[instance.size()];
+				for (int i = 0 ; i < instance.size(); i++) {
+					instancearr[i] = instance.get(i);
+				}
+				Instance inst = new DenseInstance(1.0, instancearr); 
 				t_features.features.add(inst);
 				t_features.addFeatureIndex(q.query, d.url, index);
 				index ++;

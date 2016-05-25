@@ -27,7 +27,7 @@ import weka.core.Instances;
 public class PointwiseLearner extends Learner {
 
 	
-	
+	String[] TFTYPES = {"url","title","body","header","anchor"};
 	@Override
 	public Instances extractTrainFeatures(String train_data_file,
 			String train_rel_file, Map<String, Double> idfs) {
