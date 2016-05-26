@@ -115,37 +115,31 @@ public class PointwiseLearnerExtra extends Learner {
 	//"url","title","body","header","anchor"
 	private ArrayList<Double> get_tfidfs(Document d, Map<String, Double> idfs, Query q) {
 //		Map<String, Double> tf_idfs = new HashMap<String, Double>();
-		//double[] tf_idfs = new double[12]; // adding features 
 		ArrayList<Double> tf_idfs = new ArrayList<Double>();
 		for (String type : this.TFTYPES) {
 			if (type.equals("url")){
 				List<String> urlWords = Parser.parseUrlString(d.url);
 				Double urlWeight = this.getListTfIdf(urlWords, idfs, q);
-//				tf_idfs[0] = urlWeight;
 				tf_idfs.add(urlWeight);
 			}
 			if (type.equals("title")) {
 				List<String> titleWords = Parser.parseTitle(d.title);
 				Double titleWeight = this.getListTfIdf(titleWords, idfs, q);
-//				tf_idfs[1] = titleWeight;
 				tf_idfs.add(titleWeight);
 			}
 			if (type.equals("header")) {
 				List<String> headerWords = Parser.parseHeaders(d.headers);
 				Double headerWeight = this.getListTfIdf(headerWords, idfs, q);
-//				tf_idfs[2] = headerWeight;
 				tf_idfs.add(headerWeight);
 			}
 			if (type.equals("anchor")) {
 				Map<String, Integer> counts = Parser.parseAnchors(d.anchors);
 				Double anchorWeight = this.getMapTfIdf(counts, idfs, q);
-//				tf_idfs[3] = anchorWeight;
 				tf_idfs.add(anchorWeight);
 			}
 			if (type.equals("body")) {
 				Map<String, Integer> counts = Parser.parseBody(d.body_hits);
 				Double bodyWeight = this.getMapTfIdf(counts, idfs, q);
-//				tf_idfs[4] = bodyWeight;
 				tf_idfs.add(bodyWeight);
 			}
 		}
