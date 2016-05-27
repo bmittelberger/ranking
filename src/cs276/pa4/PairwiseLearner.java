@@ -128,10 +128,10 @@ public class PairwiseLearner extends Learner {
 			Map<String,Integer> doc_to_index = indexes.get(query);
 			List<String> doc_urls = new ArrayList<String>();
 			doc_urls.addAll( doc_to_index.keySet() );
-			for ( int i = 0 ; i < doc_urls.size() - 1 ; i ++){
+			for ( int i = 0 ; i < doc_urls.size()  ; i ++){
 				Instance inst_i = standardizedDataset.get( doc_to_index.get( doc_urls.get( i )));
 				double rel_i = rel_data.get(query).get(doc_urls.get( i ));
-				for ( int j = i + 1 ; j < doc_urls.size(); j ++ ){
+				for ( int j = 0 ; j < doc_urls.size(); j ++ ){
 					double[] inst_j = standardizedDataset.get( doc_to_index.get( doc_urls.get( j ))).toDoubleArray();
 					double[] difference = inst_i.toDoubleArray();
 					for ( int k = 0 ; k < difference.length ; k ++ ){
@@ -141,8 +141,10 @@ public class PairwiseLearner extends Learner {
 					if ( rel_i < rel_j ){
 						difference[ difference.length - 1 ] = 1; //set to index of "neg"
 					}
-					else{
+					else if (rel_i > rel_j ){
 						difference[ difference.length - 1 ] = 0; //set to index of "pos"
+					} else {
+						continue;
 					}
 					Instance difference_inst = new  DenseInstance(1.0, difference);
 					finalDSet.add(difference_inst);
@@ -311,9 +313,9 @@ public class PairwiseLearner extends Learner {
 			Map<String,Integer> doc_to_index = indexes.get(query);
 			List<String> doc_urls = new ArrayList<String>();
 			doc_urls.addAll( doc_to_index.keySet() );
-			for ( int i = 0 ; i < doc_urls.size() - 1 ; i ++){
+			for ( int i = 0 ; i < doc_urls.size()  ; i ++){
 				Instance inst_i = standardizedDataset.get( doc_to_index.get( doc_urls.get( i )));
-				for ( int j = i + 1 ; j < doc_urls.size(); j ++ ){
+				for ( int j = 0 ; j < doc_urls.size(); j ++ ){
 					double[] inst_j = standardizedDataset.get( doc_to_index.get( doc_urls.get( j ))).toDoubleArray();
 					double[] difference = inst_i.toDoubleArray();
 					for ( int k = 0 ; k < difference.length ; k ++ ){
@@ -362,7 +364,7 @@ public class PairwiseLearner extends Learner {
 				urls.add(split[1]);
 				//put both sides of the comparison
 				comparisons.put(urlPair, classification);
-				comparisons.put(split[1] + "|" + split[0], 0 - classification);
+//				comparisons.put(split[1] + "|" + split[0], 0 - classification);
 			}
 			List<String> urlList = new ArrayList<String>();
 			urlList.addAll(urls);

@@ -177,11 +177,6 @@ public class PointwiseLearner extends Learner {
 			for (Document d : docs) {
 				double instance[] = get_tfidfs(d, idfs, q);
 				instance[5] = 1.0;
-//				System.out.print("Url: " + d.url + " - [");
-//				for (int i = 0; i < instance.length; i++) {
-//					System.out.print(instance[i] + ", ");
-//				}
-//				System.out.println("]");
 				Instance inst = new DenseInstance(1.0, instance); 
 				t_features.features.add(inst);
 				t_features.addFeatureIndex(q.query, d.url, index);

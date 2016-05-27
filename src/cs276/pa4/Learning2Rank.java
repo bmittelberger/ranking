@@ -31,15 +31,17 @@ public class Learning2Rank {
 	 * @param idfs
 	 * @return
 	 */
-	public static Classifier train(String train_signal_file, String train_rel_file, int task, Map<String,Double> idfs) {
+	public static Classifier train(String train_signal_file, String train_rel_file, int task, Map<String,Double> idfs, double C, double Gamma) {
 	    System.err.println("## Training with feature_file =" + train_signal_file + ", rel_file = " + train_rel_file + " ... \n");
 	    Classifier model = null;
 	    Learner learner = null;
-    
+	    
+	    
+	    
  		if (task == 1) {
 			learner = new PointwiseLearner();
 		} else if (task == 2) {
-		  boolean isLinearKernel = true;
+		  boolean isLinearKernel = false;
 			learner = new PairwiseLearner(isLinearKernel);
 		} else if (task == 3) {
 			
@@ -72,20 +74,18 @@ public class Learning2Rank {
 	 * @param idfs
 	 * @return
 	 */
-	 public static Map<String, List<String>> test(String test_signal_file, Classifier model, int task, Map<String,Double> idfs){
+	 public static Map<String, List<String>> test(String test_signal_file, Classifier model, int task, Map<String,Double> idfs, double C, double Gamma){
 		 	System.err.println("## Testing with feature_file=" + test_signal_file + " ... \n");
 		    Map<String, List<String>> ranked_queries = new HashMap<String, List<String>>();
 		    Learner learner = null;
 	 		if (task == 1) {
 				learner = new PointwiseLearner();
 			} else if (task == 2) {
-			  boolean isLinearKernel = true;
-				learner = new PairwiseLearner(isLinearKernel);
+			  boolean isLinearKernel = false;
+			  learner = new PairwiseLearner(isLinearKernel);
 			} else if (task == 3) {
-				
 				learner = new PointwiseLearnerExtra();
 //				System.err.println("Task 3");
-				
 			} else if (task == 4) {
 				
 				/* 
@@ -140,22 +140,30 @@ public class Learning2Rank {
 	      ranked_out_file = args[5];
 	    }
 	    
+	    double C = 0;
+	    double Gamma = 0;
+	    if (args.length > 6) {
+	    	 C = Integer.parseInt(args[6]);
+			 Gamma = Integer.parseInt(args[7]);
+	    }
+	    
+	    
 	    /* Populate idfs */
 	    Map<String,Double> idfs = Util.loadDFs(dfFile);
 	    
 	    /* Train & test */
 	    System.err.println("### Running task" + task + "...");		
-	    Classifier model = train(train_signal_file, train_rel_file, task, idfs);
+	    Classifier model = train(train_signal_file, train_rel_file, task, idfs, C, Gamma);
 
       /* performance on the training data */
-      Map<String, List<String>> trained_ranked_queries = test(train_signal_file, model, task, idfs);
+      Map<String, List<String>> trained_ranked_queries = test(train_signal_file, model, task, idfs, C, Gamma);
       String trainOutFile="tmp.train.ranked";
       writeRankedResultsToFile(trained_ranked_queries, new PrintStream(new FileOutputStream(trainOutFile)));
       NdcgMain ndcg = new NdcgMain(train_rel_file);
       System.err.println("# Trained NDCG=" + ndcg.score(trainOutFile));
       (new File(trainOutFile)).delete();
       
-	    Map<String, List<String>> ranked_queries = test(test_signal_file, model, task, idfs);
+	    Map<String, List<String>> ranked_queries = test(test_signal_file, model, task, idfs, C, Gamma);
 	    
 	    /* Output results */
 	    if(ranked_out_file == null || ranked_out_file.isEmpty()){ /* output to stdout */
