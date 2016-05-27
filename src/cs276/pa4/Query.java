@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Query implements Comparable<Query>{
 	String query;
-	List<String> queryWords; /* Words with no duplicates and all lower case */
+	public List<String> queryWords; /* Words with no duplicates and all lower case */
 	
 	public Query(String query) {
 		this.query = new String(query);

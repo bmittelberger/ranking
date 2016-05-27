@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import edu.stanford.cs276.SmallestWindowScorer;
 //import edu.stanford.cs276.AScorer;
 //import edu.stanford.cs276.BM25Scorer;
 import weka.classifiers.Classifier;
@@ -55,6 +56,7 @@ public class PointwiseLearnerExtra extends Learner {
 		}
 		
 		AScorer scorer = new BM25Scorer(idfs, queryDict);
+		CosineSimilarityScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
 		
 		ArrayList<Attribute> attributes = new ArrayList<Attribute>();
 		attributes.add(new Attribute("url_w"));
@@ -68,8 +70,9 @@ public class PointwiseLearnerExtra extends Learner {
 		attributes.add(new Attribute("urlDepth"));
 		attributes.add(new Attribute("numHeaders"));
 		attributes.add(new Attribute("numAnchors"));
-		attributes.add(new Attribute("bodyLength"));
-		attributes.add(new Attribute("totalLength"));
+		attributes.add(new Attribute("bodylength"));
+		attributes.add(new Attribute("BM25"));
+		attributes.add(new Attribute("smallestwindow"));
 		
 		
 		attributes.add(new Attribute("relevance_score"));
@@ -89,6 +92,7 @@ public class PointwiseLearnerExtra extends Learner {
 				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
 				instance.add((double)d.body_length); // body length
 				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
+				instance.add(swscorer.getSimScore( d, q ));
 				instance.add(rel_data.get(q.query).get(d.url));
 				double[] instancearr = new double[instance.size()];
 				for (int i = 0 ; i < instance.size(); i++) {
@@ -201,9 +205,9 @@ public class PointwiseLearnerExtra extends Learner {
 		attributes.add(new Attribute("urlDepth"));
 		attributes.add(new Attribute("numHeaders"));
 		attributes.add(new Attribute("numAnchors"));
-		attributes.add(new Attribute("bodyLength"));
-		attributes.add(new Attribute("totalLength"));
-		
+		attributes.add(new Attribute("bodylength"));
+		attributes.add(new Attribute("BM25"));
+		attributes.add(new Attribute("smallestwindow"));
 		
 		attributes.add(new Attribute("relevance_score"));
 		Instances dataset = null;
@@ -227,7 +231,7 @@ public class PointwiseLearnerExtra extends Learner {
 		}
 		
 		AScorer scorer = new BM25Scorer(idfs, queryDict);
-		
+		CosineSimilarityScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
 		
 		
 		int index = 0;
@@ -242,6 +246,7 @@ public class PointwiseLearnerExtra extends Learner {
 				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
 				instance.add((double)d.body_length); // body length
 				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
+				instance.add(swscorer.getSimScore( d, q ));
 				instance.add(1.0);
 				double[] instancearr = new double[instance.size()];
 				for (int i = 0 ; i < instance.size(); i++) {

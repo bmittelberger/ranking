@@ -366,12 +366,13 @@ public class PairwiseLearner extends Learner {
 				comparisons.put(urlPair, classification);
 //				comparisons.put(split[1] + "|" + split[0], 0 - classification);
 			}
+			final Map<String, Integer> comparisons_2 = new HashMap<String, Integer>(comparisons);
 			List<String> urlList = new ArrayList<String>();
 			urlList.addAll(urls);
 			Collections.sort(urlList, new Comparator<String>() {
 				public int compare(String one , String two) {
 					  String pair = one + "|" + two;
-					  Integer comp = comparisons.get(pair);
+					  Integer comp = comparisons_2.get(pair);
 					  return -comp;
 			    }
 			});
