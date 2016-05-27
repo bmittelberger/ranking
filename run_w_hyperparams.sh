@@ -12,8 +12,12 @@ test_signal_file="$3"
 test_rel_file="$4"
 idfs_file="$5"
 task="$6"
+C="$7"
+Gamma="$8"
 
-./l2r.sh $train_signal_file $train_rel_file $test_signal_file $idfs_file $task tmp.out.txt
+echo "learning"
+sh l2r_hyper.sh $train_signal_file $train_rel_file $test_signal_file $idfs_file $task tmp.out.txt $C $Gamma > out.txt
+echo "done learning"
 
 # compute NDCG
 echo ""

@@ -26,6 +26,10 @@ import weka.filters.unsupervised.attribute.Standardize;
  */
 public class PairwiseLearner extends Learner {
 	
+	
+	double gamma = 0.0;
+	double C = 0.0;
+	boolean isLinear = false;
 	String[] TFTYPES = {"url","title","body","header","anchor"};
   private LibSVM model;
   public PairwiseLearner(boolean isLinearKernel){
@@ -47,7 +51,12 @@ public class PairwiseLearner extends Learner {
       e.printStackTrace();
     }
     
+    System.err.println("setting the C to be " + String.valueOf(C));
     model.setCost(C);
+    this.gamma = gamma;
+    this.C = C;
+    this.isLinear = isLinearKernel;
+    System.err.println("setting Gamma to be " + String.valueOf(gamma));
     model.setGamma(gamma); // only matter for RBF kernel
     if(isLinearKernel){
       model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR, LibSVM.TAGS_KERNELTYPE));
@@ -57,6 +66,10 @@ public class PairwiseLearner extends Learner {
 	@Override
 	public Instances extractTrainFeatures(String train_data_file,
 			String train_rel_file, Map<String, Double> idfs) {
+		
+		System.err.println("Getting gamma in train: " +  model.getGamma());
+		System.err.println("Getting C in train:" + model.getCost());
+		
 		Map<Query,List<Document>> train_data = null;
 		Map<String, Map<String, Double>> rel_data = null;
 		try {
@@ -220,11 +233,20 @@ public class PairwiseLearner extends Learner {
 	@Override
 	public Classifier training(Instances dataset) {
 		LibSVM model = new LibSVM();
+		if (this.C != 0.0 && this.gamma != 0.0) {
+			model.setCost(this.C);
+			model.setGamma(this.gamma);
+		}
+		if (this.isLinear) {
+			model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,
+					LibSVM.TAGS_KERNELTYPE));
+		}
 		System.out.println("num instances: " + dataset.numInstances());
 		System.out.println("num attributes: " + dataset.numAttributes());
-		model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,
-				LibSVM.TAGS_KERNELTYPE));
+		
 		try {
+			System.err.println("Getting gamma in TRAINING: " +  model.getGamma());
+			System.err.println("Getting C in TRAINING:" + model.getCost());
 			model.buildClassifier(dataset);
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -235,6 +257,9 @@ public class PairwiseLearner extends Learner {
 	@Override
 	public TestFeatures extractTestFeatures(String test_data_file,
 			Map<String, Double> idfs) {
+		
+		System.err.println("Getting gamma in test: " +  model.getGamma());
+		System.err.println("Getting C in test:" + model.getCost());
 		
 		Map<Query,List<Document>> train_data = null;
 		Map<String, Map<String, Double>> rel_data = null;
@@ -362,9 +387,7 @@ public class PairwiseLearner extends Learner {
 				String[] split = urlPair.split("\\|");
 				urls.add(split[0]);
 				urls.add(split[1]);
-				//put both sides of the comparison
 				comparisons.put(urlPair, classification);
-//				comparisons.put(split[1] + "|" + split[0], 0 - classification);
 			}
 			List<String> urlList = new ArrayList<String>();
 			urlList.addAll(urls);

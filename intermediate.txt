@@ -1,0 +1,1715 @@
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+................................
+WARNING: using -h 0 may be faster
+*.................
+WARNING: using -h 0 may be faster
+.................*....................
+WARNING: using -h 0 may be faster
+*..........................*...............................*............
+WARNING: using -h 0 may be faster
+*...........*................*.......................................
+WARNING: using -h 0 may be faster
+*..........................................................................................................*
+optimization finished, #iter = 324424
+nu = 0.8040948279978336
+obj = -12506.682771273228, rho = 1.8587367243262813E-4
+nSV = 12511, nBSV = 12504
+Total nSV = 12511
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8280375328464212
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+................................
+WARNING: using -h 0 may be faster
+*.................
+WARNING: using -h 0 may be faster
+.................*....................
+WARNING: using -h 0 may be faster
+*..........................*...............................*............
+WARNING: using -h 0 may be faster
+*...........*................*.......................................
+WARNING: using -h 0 may be faster
+*..........................................................................................................*
+optimization finished, #iter = 324424
+nu = 0.8040948279978336
+obj = -12506.682771273228, rho = 1.8587367243262813E-4
+nSV = 12511, nBSV = 12504
+Total nSV = 12511
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8280375328464212
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+running with C = 0.125 Gamma = 0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.0078125
+setting the C to be 0.125
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:0.125
+......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 6934
+nu = 0.811736088362434
+obj = -1560.4000307729102, rho = -7.310066500884946E-4
+nSV = 12633, nBSV = 12616
+Total nSV = 12633
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.0078125
+setting the C to be 0.125
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8271571303251497
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.0078125
+setting the C to be 0.125
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.015625
+setting the C to be 0.125
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:0.125
+......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 6984
+nu = 0.8012236977691319
+obj = -1541.7392131637698, rho = -4.020926273965159E-4
+nSV = 12475, nBSV = 12454
+Total nSV = 12475
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.015625
+setting the C to be 0.125
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8296929246747614
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.015625
+setting the C to be 0.125
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.03125
+setting the C to be 0.125
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:0.125
+.......
+WARNING: using -h 0 may be faster
+*.*
+optimization finished, #iter = 7132
+nu = 0.79284340347582
+obj = -1524.748628705829, rho = -2.3998631062439443E-5
+nSV = 12350, nBSV = 12318
+Total nSV = 12350
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.03125
+setting the C to be 0.125
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8292126504719431
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.03125
+setting the C to be 0.125
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.0625
+setting the C to be 0.125
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:0.125
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7410
+nu = 0.7848368599059278
+obj = -1504.3644208187693, rho = -4.1604326208903955E-5
+nSV = 12240, nBSV = 12177
+Total nSV = 12240
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.0625
+setting the C to be 0.125
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8302688132314461
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.0625
+setting the C to be 0.125
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.125
+setting the C to be 0.125
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:0.125
+.......
+WARNING: using -h 0 may be faster
+*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7780
+nu = 0.7779544393713974
+obj = -1485.1255496366264, rho = 1.035113558656915E-4
+nSV = 12156, nBSV = 12048
+Total nSV = 12156
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.125
+setting the C to be 0.125
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8301355467894772
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.125
+setting the C to be 0.125
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.25
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.25
+setting the C to be 0.125
+setting Gamma to be 0.25
+Getting gamma in train: 0.25
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.25
+Getting C in TRAINING:0.125
+.......
+WARNING: using -h 0 may be faster
+.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 8204
+nu = 0.7756542081749415
+obj = -1470.0863563698533, rho = -5.177687943526521E-5
+nSV = 12137, nBSV = 11975
+Total nSV = 12137
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.25
+setting the C to be 0.125
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8327037448288537
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.25
+setting the C to be 0.125
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.125
+arg7 = 0.5
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.125 Gamma = 0.5
+setting the C to be 0.125
+setting Gamma to be 0.5
+Getting gamma in train: 0.5
+Getting C in train:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.5
+Getting C in TRAINING:0.125
+........
+WARNING: using -h 0 may be faster
+*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 9231
+nu = 0.7818364147599809
+obj = -1464.75460534603, rho = 3.4161060751722E-5
+nSV = 12311, nBSV = 12015
+Total nSV = 12311
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.125 Gamma = 0.5
+setting the C to be 0.125
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8396539867501404
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.125 Gamma = 0.5
+setting the C to be 0.125
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.125
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.0078125
+setting the C to be 0.25
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:0.25
+......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 6975
+nu = 0.8035601893631198
+obj = -3100.3809535761393, rho = -3.7394745315019805E-4
+nSV = 12510, nBSV = 12488
+Total nSV = 12510
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.0078125
+setting the C to be 0.25
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8286361369662877
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.0078125
+setting the C to be 0.25
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.015625
+setting the C to be 0.25
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:0.25
+......
+WARNING: using -h 0 may be faster
+.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7096
+nu = 0.7942504224333314
+obj = -3064.2690939331474, rho = -1.799463313795825E-4
+nSV = 12370, nBSV = 12337
+Total nSV = 12370
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.015625
+setting the C to be 0.25
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8302691007466614
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.015625
+setting the C to be 0.25
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.03125
+setting the C to be 0.25
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:0.25
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7539
+nu = 0.7862107478446815
+obj = -3026.6294658788106, rho = -1.482976224754512E-4
+nSV = 12261, nBSV = 12193
+Total nSV = 12261
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.03125
+setting the C to be 0.25
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8297920482543327
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.03125
+setting the C to be 0.25
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.0625
+setting the C to be 0.25
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:0.25
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7774
+nu = 0.776377140622267
+obj = -2979.799066252273, rho = 4.804008756007034E-5
+nSV = 12138, nBSV = 12030
+Total nSV = 12138
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.0625
+setting the C to be 0.25
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.828488757916907
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.0625
+setting the C to be 0.25
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.125
+setting the C to be 0.25
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:0.25
+.......
+WARNING: using -h 0 may be faster
+.*
+optimization finished, #iter = 8320
+nu = 0.7675349877359011
+obj = -2933.692640393308, rho = 6.163363875112008E-5
+nSV = 12009, nBSV = 11864
+Total nSV = 12009
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.125
+setting the C to be 0.25
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8297620508258609
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.125
+setting the C to be 0.25
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.25
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.25
+setting the C to be 0.25
+setting Gamma to be 0.25
+Getting gamma in train: 0.25
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.25
+Getting C in TRAINING:0.25
+........
+WARNING: using -h 0 may be faster
+.*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 9858
+nu = 0.7613193479175389
+obj = -2889.8827169178157, rho = -3.057671223669867E-5
+nSV = 11980, nBSV = 11715
+Total nSV = 11980
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.25
+setting the C to be 0.25
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8353670439090636
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.25
+setting the C to be 0.25
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.25
+arg7 = 0.5
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.25 Gamma = 0.5
+setting the C to be 0.25
+setting Gamma to be 0.5
+Getting gamma in train: 0.5
+Getting C in train:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.5
+Getting C in TRAINING:0.25
+........
+WARNING: using -h 0 may be faster
+..*.*
+optimization finished, #iter = 10559
+nu = 0.7608273169107481
+obj = -2855.887068954795, rho = -5.270971765391142E-5
+nSV = 12086, nBSV = 11615
+Total nSV = 12086
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.25 Gamma = 0.5
+setting the C to be 0.25
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8406995232045306
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.25 Gamma = 0.5
+setting the C to be 0.25
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.25
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.0078125
+setting the C to be 0.5
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:0.5
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7139
+nu = 0.7983673061065119
+obj = -6171.442497761131, rho = -6.652004955808498E-5
+nSV = 12433, nBSV = 12405
+Total nSV = 12433
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.0078125
+setting the C to be 0.5
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8294632102481736
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.0078125
+setting the C to be 0.5
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.015625
+setting the C to be 0.5
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:0.5
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7312
+nu = 0.7890319947026293
+obj = -6099.044397080043, rho = -7.840236021477673E-5
+nSV = 12296, nBSV = 12244
+Total nSV = 12296
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.015625
+setting the C to be 0.5
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8310974607811783
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.015625
+setting the C to be 0.5
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.03125
+setting the C to be 0.5
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:0.5
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7813
+nu = 0.7800138252419089
+obj = -6014.650225533646, rho = 1.0589152576491277E-4
+nSV = 12176, nBSV = 12086
+Total nSV = 12176
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.03125
+setting the C to be 0.5
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.828073034259175
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.03125
+setting the C to be 0.5
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.0625
+setting the C to be 0.5
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:0.5
+.......
+WARNING: using -h 0 may be faster
+.
+WARNING: using -h 0 may be faster
+*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 9385
+nu = 0.7684232948423697
+obj = -5909.623296508427, rho = -3.0768763077861025E-5
+nSV = 12025, nBSV = 11886
+Total nSV = 12025
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.0625
+setting the C to be 0.5
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8286343167053497
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.0625
+setting the C to be 0.5
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.125
+setting the C to be 0.5
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:0.5
+........
+WARNING: using -h 0 may be faster
+.*
+optimization finished, #iter = 9509
+nu = 0.7572756534637809
+obj = -5801.736430318292, rho = 2.2405745930456932E-5
+nSV = 11888, nBSV = 11654
+Total nSV = 11888
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.125
+setting the C to be 0.5
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8319400281578565
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.125
+setting the C to be 0.5
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.25
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.25
+setting the C to be 0.5
+setting Gamma to be 0.25
+Getting gamma in train: 0.25
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.25
+Getting C in TRAINING:0.5
+.........
+WARNING: using -h 0 may be faster
+...*
+optimization finished, #iter = 12430
+nu = 0.7477557657241749
+obj = -5685.658460667042, rho = -2.547676409923809E-5
+nSV = 11837, nBSV = 11426
+Total nSV = 11837
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.25
+setting the C to be 0.5
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8382893885357252
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.25
+setting the C to be 0.5
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 0.5
+arg7 = 0.5
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 0.5 Gamma = 0.5
+setting the C to be 0.5
+setting Gamma to be 0.5
+Getting gamma in train: 0.5
+Getting C in train:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.5
+Getting C in TRAINING:0.5
+..........
+WARNING: using -h 0 may be faster
+...*
+optimization finished, #iter = 13744
+nu = 0.7410970496496752
+obj = -5575.52152001256, rho = 3.0122969738632645E-6
+nSV = 11855, nBSV = 11192
+Total nSV = 11855
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 0.5 Gamma = 0.5
+setting the C to be 0.5
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.842692008160224
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 0.5 Gamma = 0.5
+setting the C to be 0.5
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:0.5
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.0078125
+setting the C to be 1.0
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:1.0
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7319
+nu = 0.794877610156686
+obj = -12292.34767359975, rho = -3.57391725653176E-5
+nSV = 12382, nBSV = 12346
+Total nSV = 12382
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.0078125
+setting the C to be 1.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8305193788427239
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.0078125
+setting the C to be 1.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.015625
+setting the C to be 1.0
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:1.0
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7531
+nu = 0.7855052332571567
+obj = -12150.184239228336, rho = -1.617141806700282E-5
+nSV = 12243, nBSV = 12186
+Total nSV = 12243
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.015625
+setting the C to be 1.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8308521409126531
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.015625
+setting the C to be 1.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.03125
+setting the C to be 1.0
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:1.0
+.......
+WARNING: using -h 0 may be faster
+.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 8930
+nu = 0.7752841065036978
+obj = -11960.6857885615, rho = 7.488468137798478E-5
+nSV = 12120, nBSV = 12005
+Total nSV = 12120
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.03125
+setting the C to be 1.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8285101603267756
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.03125
+setting the C to be 1.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.0625
+setting the C to be 1.0
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:1.0
+.........
+WARNING: using -h 0 may be faster
+..*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 11422
+nu = 0.7617957749870459
+obj = -11733.58721449071, rho = 1.0937959258907601E-5
+nSV = 11941, nBSV = 11751
+Total nSV = 11941
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.0625
+setting the C to be 1.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8292728436280922
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.0625
+setting the C to be 1.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.125
+setting the C to be 1.0
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:1.0
+.........
+WARNING: using -h 0 may be faster
+...*.*
+optimization finished, #iter = 12898
+nu = 0.7486171189165172
+obj = -11488.926683872663, rho = -6.80182757168501E-5
+nSV = 11825, nBSV = 11458
+Total nSV = 11825
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.125
+setting the C to be 1.0
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8361226896255983
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.125
+setting the C to be 1.0
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.25
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.25
+setting the C to be 1.0
+setting Gamma to be 0.25
+Getting gamma in train: 0.25
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.25
+Getting C in TRAINING:1.0
+...........
+WARNING: using -h 0 may be faster
+....*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 16208
+nu = 0.7350093671459146
+obj = -11201.047427889494, rho = 8.740597176102721E-6
+nSV = 11699, nBSV = 11159
+Total nSV = 11699
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.25
+setting the C to be 1.0
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8391184959261323
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.25
+setting the C to be 1.0
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 1
+arg7 = 0.5
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 1.0 Gamma = 0.5
+setting the C to be 1.0
+setting Gamma to be 0.5
+Getting gamma in train: 0.5
+Getting C in train:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.5
+Getting C in TRAINING:1.0
+..................*
+optimization finished, #iter = 18329
+nu = 0.7227547048810903
+obj = -10902.633718698538, rho = 6.003489764449503E-6
+nSV = 11721, nBSV = 10762
+Total nSV = 11721
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 1.0 Gamma = 0.5
+setting the C to be 1.0
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8464025024854196
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 1.0 Gamma = 0.5
+setting the C to be 1.0
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:1.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.0078125
+setting the C to be 2.0
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:2.0
+.......
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 7785
+nu = 0.7910979423204703
+obj = -24499.609037753693, rho = -8.075663837735284E-5
+nSV = 12322, nBSV = 12280
+Total nSV = 12322
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.0078125
+setting the C to be 2.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8312197534503964
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.0078125
+setting the C to be 2.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.015625
+setting the C to be 2.0
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:2.0
+.......
+WARNING: using -h 0 may be faster
+.*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 8850
+nu = 0.7828116413996399
+obj = -24205.240664956687, rho = 1.7798569605617534E-4
+nSV = 12215, nBSV = 12148
+Total nSV = 12215
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.015625
+setting the C to be 2.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.829552518813836
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.015625
+setting the C to be 2.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.03125
+setting the C to be 2.0
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:2.0
+.........
+WARNING: using -h 0 may be faster
+..*.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 11745
+nu = 0.7706660512823197
+obj = -23791.28283207246, rho = -1.7219980823327758E-4
+nSV = 12060, nBSV = 11927
+Total nSV = 12060
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.03125
+setting the C to be 2.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8295264525317638
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.03125
+setting the C to be 2.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.0625
+setting the C to be 2.0
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:2.0
+...........
+WARNING: using -h 0 may be faster
+...*
+optimization finished, #iter = 14226
+nu = 0.7559223295167389
+obj = -23318.303675258358, rho = -1.2348211134108222E-4
+nSV = 11892, nBSV = 11648
+Total nSV = 11892
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.0625
+setting the C to be 2.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8304397786068898
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.0625
+setting the C to be 2.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.125
+setting the C to be 2.0
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:2.0
+............
+WARNING: using -h 0 may be faster
+....*
+optimization finished, #iter = 16908
+nu = 0.7411555085212763
+obj = -22773.893221755487, rho = -2.0735186329378946E-5
+nSV = 11750, nBSV = 11362
+Total nSV = 11750
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.125
+setting the C to be 2.0
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8370020081006168
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.125
+setting the C to be 2.0
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.25
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.25
+setting the C to be 2.0
+setting Gamma to be 0.25
+Getting gamma in train: 0.25
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.25
+Getting C in TRAINING:2.0
+..............
+WARNING: using -h 0 may be faster
+........*.*
+optimization finished, #iter = 22601
+nu = 0.7236413776141677
+obj = -22104.569536634517, rho = -3.1632077485898528E-6
+nSV = 11616, nBSV = 10998
+Total nSV = 11616
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.25
+setting the C to be 2.0
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8424036441720033
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.25
+setting the C to be 2.0
+setting Gamma to be 0.25
+Getting gamma in test: 0.25
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 2
+arg7 = 0.5
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 2.0 Gamma = 0.5
+setting the C to be 2.0
+setting Gamma to be 0.5
+Getting gamma in train: 0.5
+Getting C in train:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.5
+Getting C in TRAINING:2.0
+............................*
+optimization finished, #iter = 28472
+nu = 0.7058430386454942
+obj = -21372.81739597715, rho = -1.400984661813181E-5
+nSV = 11625, nBSV = 10511
+Total nSV = 11625
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 2.0 Gamma = 0.5
+setting the C to be 2.0
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8483821624658441
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 2.0 Gamma = 0.5
+setting the C to be 2.0
+setting Gamma to be 0.5
+Getting gamma in test: 0.5
+Getting C in test:2.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 4
+arg7 = 0.0078125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 4.0 Gamma = 0.0078125
+setting the C to be 4.0
+setting Gamma to be 0.0078125
+Getting gamma in train: 0.0078125
+Getting C in train:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0078125
+Getting C in TRAINING:4.0
+.......
+WARNING: using -h 0 may be faster
+.
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 8565
+nu = 0.7883257421919614
+obj = -48853.03629936475, rho = -1.6169671531437695E-4
+nSV = 12281, nBSV = 12236
+Total nSV = 12281
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 4.0 Gamma = 0.0078125
+setting the C to be 4.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8310654286715285
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 4.0 Gamma = 0.0078125
+setting the C to be 4.0
+setting Gamma to be 0.0078125
+Getting gamma in test: 0.0078125
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 4
+arg7 = 0.015625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 4.0 Gamma = 0.015625
+setting the C to be 4.0
+setting Gamma to be 0.015625
+Getting gamma in train: 0.015625
+Getting C in train:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.015625
+Getting C in TRAINING:4.0
+...........*.*
+optimization finished, #iter = 11540
+nu = 0.7794234231944741
+obj = -48206.4740454447, rho = -4.2789273566846926E-4
+nSV = 12176, nBSV = 12088
+Total nSV = 12176
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 4.0 Gamma = 0.015625
+setting the C to be 4.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.8277041734070383
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 4.0 Gamma = 0.015625
+setting the C to be 4.0
+setting Gamma to be 0.015625
+Getting gamma in test: 0.015625
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 4
+arg7 = 0.03125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 4.0 Gamma = 0.03125
+setting the C to be 4.0
+setting Gamma to be 0.03125
+Getting gamma in train: 0.03125
+Getting C in train:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.03125
+Getting C in TRAINING:4.0
+...............*
+optimization finished, #iter = 15483
+nu = 0.7663266389758728
+obj = -47330.16068812911, rho = 5.427947959059111E-6
+nSV = 12021, nBSV = 11845
+Total nSV = 12021
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 4.0 Gamma = 0.03125
+setting the C to be 4.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.829803593289793
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 4.0 Gamma = 0.03125
+setting the C to be 4.0
+setting Gamma to be 0.03125
+Getting gamma in test: 0.03125
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 4
+arg7 = 0.0625
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 4.0 Gamma = 0.0625
+setting the C to be 4.0
+setting Gamma to be 0.0625
+Getting gamma in train: 0.0625
+Getting C in train:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.0625
+Getting C in TRAINING:4.0
+..................*...*
+optimization finished, #iter = 20730
+nu = 0.751329842492333
+obj = -46377.873350125476, rho = 1.5841243336186964E-4
+nSV = 11840, nBSV = 11588
+Total nSV = 11840
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 4.0 Gamma = 0.0625
+setting the C to be 4.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Trained NDCG=0.832327121911357
+## Testing with feature_file=../data/pa3.signal.dev ... 
+
+testing with C = 4.0 Gamma = 0.0625
+setting the C to be 4.0
+setting Gamma to be 0.0625
+Getting gamma in test: 0.0625
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.dev: number of queries=100, number of documents=991
+arg6 = 4
+arg7 = 0.125
+### Running task2...
+## Training with feature_file =../data/pa3.signal.train, rel_file = ../data/pa3.rel.train ... 
+
+training with C = 4.0 Gamma = 0.125
+setting the C to be 4.0
+setting Gamma to be 0.125
+Getting gamma in train: 0.125
+Getting C in train:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+# Rel file ../data/pa3.rel.train: number of queries=240, number of documents=2381
+num instances: 15554
+num attributes: 6
+Getting gamma in TRAINING: 0.125
+Getting C in TRAINING:4.0
+..........................*.*
+optimization finished, #iter = 27079
+nu = 0.7348446865771787
+obj = -45160.53911836905, rho = -1.180020076585567E-4
+nSV = 11678, nBSV = 11263
+Total nSV = 11678
+## Testing with feature_file=../data/pa3.signal.train ... 
+
+testing with C = 4.0 Gamma = 0.125
+setting the C to be 4.0
+setting Gamma to be 0.125
+Getting gamma in test: 0.125
+Getting C in test:4.0
+# Signal file ../data/pa3.signal.train: number of queries=240, number of documents=2381
+arg6 = 4
+arg7 = 0.25
