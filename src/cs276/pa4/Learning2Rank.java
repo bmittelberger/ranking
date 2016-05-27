@@ -42,17 +42,16 @@ public class Learning2Rank {
 			learner = new PointwiseLearner();
 		} else if (task == 2) {
 		  boolean isLinearKernel = true;
-		  	if (C != 0.0 && Gamma != 0.0){
-		  		System.err.println("training with C = " + String.valueOf(C) + " Gamma = " + String.valueOf(Gamma)); 
+		  	if (C != 0.0){
 		  		learner = new PairwiseLearner(C, Gamma, isLinearKernel);
 		  	} else {
 		  		learner = new PairwiseLearner(isLinearKernel);
 		  	}
 		} else if (task == 3) {
 			
-			learner = new PointwiseLearnerExtra();
-			System.err.println("Task 3");
-			
+			System.err.println("TASK 3 GOING");
+			boolean isLinearKernel = false;
+			learner = new PairwiseLearnerExtra(C, Gamma, isLinearKernel);
 		} else if (task == 4) {
 			
 			/* 
@@ -87,14 +86,15 @@ public class Learning2Rank {
 				learner = new PointwiseLearner();
 			} else if (task == 2) {
 			  boolean isLinearKernel = true;
-			  	if (C != 0.0 && Gamma != 0.0){
-			  		System.err.println("testing with C = " + String.valueOf(C) + " Gamma = " + String.valueOf(Gamma)); 
+			  	if (C != 0.0){
 			  		learner = new PairwiseLearner(C, Gamma, isLinearKernel);
 			  	} else {
 			  		learner = new PairwiseLearner(isLinearKernel);
 			  	}
 			} else if (task == 3) {
-				learner = new PointwiseLearnerExtra();
+				
+				boolean isLinearKernel = false;
+				learner = new PairwiseLearnerExtra(C, Gamma, isLinearKernel);
 //				System.err.println("Task 3");
 			} else if (task == 4) {
 				
@@ -133,12 +133,12 @@ public class Learning2Rank {
 	
 
 	public static void main(String[] args) throws IOException {
-//	    if (args.length != 5 && args.length != 6) {
-//	      System.err.println("Input arguments: " + Arrays.toString(args));
-//	      System.err.println("Usage: <train_signal_file> <train_rel_file> <test_signal_file> <idfs_file> <task> [ranked_out_file]");
-//	      System.err.println("  ranked_out_file (optional): output results are written into the specified file. If not, output to stdout.");
-//	      return;
-//	    }
+	    if (args.length != 5 && args.length != 6) {
+	      System.err.println("Input arguments: " + Arrays.toString(args));
+	      System.err.println("Usage: <train_signal_file> <train_rel_file> <test_signal_file> <idfs_file> <task> [ranked_out_file]");
+	      System.err.println("  ranked_out_file (optional): output results are written into the specified file. If not, output to stdout.");
+	      return;
+	    }
 
 	    String train_signal_file = args[0];
 	    String train_rel_file = args[1];
@@ -154,9 +154,9 @@ public class Learning2Rank {
 	    double Gamma = 0;
 	    if (args.length > 6) {
 	    	 C = Double.parseDouble(args[6]);
-			 Gamma = Double.parseDouble(args[7]);
+//			 Gamma = Double.parseDouble(args[7]);
 			 System.err.println("arg6 = " + args[6]);
-			 System.err.println("arg7 = " + args[7]);
+//			 System.err.println("arg7 = " + args[7]);
 
 	    } else {
 	    	System.err.println("not found");

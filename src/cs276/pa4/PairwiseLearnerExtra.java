@@ -25,6 +25,11 @@ public class PairwiseLearnerExtra extends Learner {
 
 	
 	String[] TFTYPES = {"url","title","body","header","anchor"};
+	
+	double gamma = 0.0078125;
+	double C = 0.25;
+	boolean linearKernel = false;
+	
 	  private LibSVM model;
 	  public PairwiseLearnerExtra (boolean isLinearKernel){
 	    try{
@@ -45,8 +50,8 @@ public class PairwiseLearnerExtra extends Learner {
 	      e.printStackTrace();
 	    }
 	    
-	    model.setCost(C);
-	    model.setGamma(gamma); // only matter for RBF kernel
+	    model.setCost(this.C);
+	    model.setGamma(this.gamma); // only matter for RBF kernel
 	    if(isLinearKernel){
 	      model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR, LibSVM.TAGS_KERNELTYPE));
 	    }
@@ -75,7 +80,7 @@ public class PairwiseLearnerExtra extends Learner {
 			}
 			
 			AScorer scorer = new BM25Scorer(idfs, queryDict);
-			CosineSimilarityScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
+			SmallestWindowScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
 			
 			List classes = new ArrayList(2); 
 			classes.add("pos"); 
@@ -97,6 +102,8 @@ public class PairwiseLearnerExtra extends Learner {
 			attributes.add(new Attribute("bodylength"));
 			attributes.add(new Attribute("BM25"));
 			attributes.add(new Attribute("smallestwindow"));
+			attributes.add(new Attribute("page_id"));
+			attributes.add(new Attribute("url_indicator"));
 			
 			
 			attributes.add(new Attribute("class", classes));
@@ -121,13 +128,14 @@ public class PairwiseLearnerExtra extends Learner {
 					instance.add((double)d.body_length); // body length
 					instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
 					instance.add(swscorer.getSimScore(d, q));
-					instance.add(rel_data.get(q.query).get(d.url));
-					
+					instance.add(url_has_page_id( d ));
+					instance.add(url_has_word( q, d ));
 					instance.add(0.0);
 					double[] instancearr = new double[instance.size()];
 					for (int i = 0 ; i < instance.size(); i++) {
 						instancearr[i] = instance.get(i);
 					}
+					
 					Instance inst = new DenseInstance(1.0, instancearr); 
 					dataset.add(inst);
 					indexes.get(q.query).put(d.url, index);
@@ -177,9 +185,22 @@ public class PairwiseLearnerExtra extends Learner {
 			return finalDSet;
 		}
 		
+		private double url_has_word( Query q, Document d) {
+			for (String word : q.queryWords) {
+				if (d.url.toLowerCase().contains(word)) {
+					return 1.0;
+				}
+			}
+			return 0;
+		}
+		
 		private double get_url_depth( Document d ){
 			String[] url_split = d.url.split("/");
 			return (double) url_split.length;
+		}
+		
+		private double url_has_page_id( Document d ){
+			return d.url.toLowerCase().contains( "page_id" ) ? 1.0 : 0.0 ;
 		}
 
 
@@ -247,10 +268,10 @@ public class PairwiseLearnerExtra extends Learner {
 		@Override
 		public Classifier training(Instances dataset) {
 			LibSVM model = new LibSVM();
-			System.out.println("num instances: " + dataset.numInstances());
-			System.out.println("num attributes: " + dataset.numAttributes());
-			model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,
-					LibSVM.TAGS_KERNELTYPE));
+			model.setCost(this.C);
+			model.setGamma(this.gamma);
+//			model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,
+//					LibSVM.TAGS_KERNELTYPE));
 			try {
 				model.buildClassifier(dataset);
 			} catch(Exception e) {
@@ -282,7 +303,7 @@ public class PairwiseLearnerExtra extends Learner {
 			}
 			
 			AScorer scorer = new BM25Scorer(idfs, queryDict);
-			CosineSimilarityScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
+			SmallestWindowScorer swscorer = new SmallestWindowScorer( idfs , queryDict );
 			
 			
 			
@@ -304,6 +325,8 @@ public class PairwiseLearnerExtra extends Learner {
 			attributes.add(new Attribute("bodylength"));
 			attributes.add(new Attribute("BM25"));
 			attributes.add(new Attribute("smallestwindow"));
+			attributes.add(new Attribute("page_id"));
+			attributes.add(new Attribute("url_indicator"));
 			
 			attributes.add(new Attribute("class", classes));
 			Instances dataset = null;
@@ -332,8 +355,8 @@ public class PairwiseLearnerExtra extends Learner {
 					instance.add((double)d.body_length); // body length
 					instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
 					instance.add(swscorer.getSimScore(d, q));
-					instance.add(rel_data.get(q.query).get(d.url));
-					
+					instance.add(url_has_page_id( d ));
+					instance.add(url_has_word( q, d ));
 					instance.add(0.0);
 					double[] instancearr = new double[instance.size()];
 					for (int i = 0 ; i < instance.size(); i++) {

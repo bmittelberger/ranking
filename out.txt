@@ -1,0 +1,10 @@
+Buildfile: /Users/bmittelberger1/Documents/cs276/pa4-skeleton/ranking/build.xml
+
+init:
+
+compile:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+YOOYOYOY
+Executing: java -cp classes:lib/weka.jar cs276.pa4.Learning2Rank ../data/pa3.signal.train ../data/pa3.rel.train ../data/pa3.signal.dev ../data/idfs 2 tmp.out.txt C=8 Gamma=

@@ -68,7 +68,7 @@ public class PointwiseLearnerExtra extends Learner {
 		//Made changes to original here.
 		attributes.add(new Attribute("pagerank"));
 		attributes.add(new Attribute("urlDepth"));
-		attributes.add(new Attribute("numHeaders"));
+//		attributes.add(new Attribute("numHeaders"));
 		attributes.add(new Attribute("numAnchors"));
 		attributes.add(new Attribute("bodylength"));
 		attributes.add(new Attribute("BM25"));
@@ -88,7 +88,7 @@ public class PointwiseLearnerExtra extends Learner {
 				ArrayList<Double> instance = get_tfidfs(d, idfs, q);
 				instance.add((double)d.page_rank);
 				instance.add(get_url_depth( d ));
-				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
+//				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
 				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
 				instance.add((double)d.body_length); // body length
 				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 
@@ -203,7 +203,7 @@ public class PointwiseLearnerExtra extends Learner {
 		//Made changes to original here.
 		attributes.add(new Attribute("pagerank"));
 		attributes.add(new Attribute("urlDepth"));
-		attributes.add(new Attribute("numHeaders"));
+//		attributes.add(new Attribute("numHeaders"));
 		attributes.add(new Attribute("numAnchors"));
 		attributes.add(new Attribute("bodylength"));
 		attributes.add(new Attribute("BM25"));
@@ -242,7 +242,7 @@ public class PointwiseLearnerExtra extends Learner {
 				ArrayList<Double> instance = get_tfidfs(d, idfs, q);
 				instance.add((double)d.page_rank);
 				instance.add(get_url_depth( d ));
-				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
+//				instance.add(d.headers != null ? d.headers.size() : 0.0); // count num headers
 				instance.add(d.anchors != null ? d.anchors.size() : 0.0); // count num anchors
 				instance.add((double)d.body_length); // body length
 				instance.add(scorer.getSimScore( d , q ));  //BM25 score from pset 3 

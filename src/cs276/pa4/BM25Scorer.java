@@ -30,7 +30,7 @@ public class BM25Scorer extends AScorer {
 	double bbody = 0.7;
 	double banchor = 0.2;
 	
-	double k1 = 10;
+	double k1 = 5;
 	double pageRankLambda = 3;
 	double pageRankLambdaPrime = .1; // for the log function: add log( pageRankLambdaPrime + page_rank_doc ) to each relevance computation
 	

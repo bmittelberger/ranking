@@ -51,7 +51,6 @@ public class PairwiseLearner extends Learner {
       e.printStackTrace();
     }
     
-    System.err.println("setting the C to be " + String.valueOf(C));
     model.setCost(C);
     this.gamma = gamma;
     this.C = C;
@@ -67,8 +66,7 @@ public class PairwiseLearner extends Learner {
 	public Instances extractTrainFeatures(String train_data_file,
 			String train_rel_file, Map<String, Double> idfs) {
 		
-		System.err.println("Getting gamma in train: " +  model.getGamma());
-		System.err.println("Getting C in train:" + model.getCost());
+
 		
 		Map<Query,List<Document>> train_data = null;
 		Map<String, Map<String, Double>> rel_data = null;
@@ -233,9 +231,9 @@ public class PairwiseLearner extends Learner {
 	@Override
 	public Classifier training(Instances dataset) {
 		LibSVM model = new LibSVM();
-		if (this.C != 0.0 && this.gamma != 0.0) {
+		if (this.C != 0.0) {
 			model.setCost(this.C);
-			model.setGamma(this.gamma);
+//			model.setGamma(this.gamma);
 		}
 		if (this.isLinear) {
 			model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,

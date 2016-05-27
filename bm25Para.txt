@@ -8,6 +8,6 @@ btitle 0.1
 bheader 0.2
 bbody 0.7
 banchor 0.2
-k1 10.0
+k1 5.0
 pageRankLambda 3.0
 pageRankLambdaPrime 0.1
