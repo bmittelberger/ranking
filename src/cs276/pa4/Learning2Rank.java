@@ -49,7 +49,6 @@ public class Learning2Rank {
 		  	}
 		} else if (task == 3) {
 			
-			System.err.println("TASK 3 GOING");
 			boolean isLinearKernel = false;
 			learner = new PairwiseLearnerExtra(C, Gamma, isLinearKernel);
 		} else if (task == 4) {
@@ -152,16 +151,6 @@ public class Learning2Rank {
 	    
 	    double C = 0;
 	    double Gamma = 0;
-	    if (args.length > 6) {
-	    	 C = Double.parseDouble(args[6]);
-//			 Gamma = Double.parseDouble(args[7]);
-			 System.err.println("arg6 = " + args[6]);
-//			 System.err.println("arg7 = " + args[7]);
-
-	    } else {
-	    	System.err.println("not found");
-	    }
-	    
 	    
 	    /* Populate idfs */
 	    Map<String,Double> idfs = Util.loadDFs(dfFile);
