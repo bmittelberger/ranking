@@ -55,7 +55,6 @@ public class PairwiseLearner extends Learner {
     this.gamma = gamma;
     this.C = C;
     this.isLinear = isLinearKernel;
-    System.err.println("setting Gamma to be " + String.valueOf(gamma));
     model.setGamma(gamma); // only matter for RBF kernel
     if(isLinearKernel){
       model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR, LibSVM.TAGS_KERNELTYPE));
@@ -239,12 +238,8 @@ public class PairwiseLearner extends Learner {
 			model.setKernelType(new SelectedTag(LibSVM.KERNELTYPE_LINEAR,
 					LibSVM.TAGS_KERNELTYPE));
 		}
-		System.out.println("num instances: " + dataset.numInstances());
-		System.out.println("num attributes: " + dataset.numAttributes());
 		
 		try {
-			System.err.println("Getting gamma in TRAINING: " +  model.getGamma());
-			System.err.println("Getting C in TRAINING:" + model.getCost());
 			model.buildClassifier(dataset);
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -256,8 +251,6 @@ public class PairwiseLearner extends Learner {
 	public TestFeatures extractTestFeatures(String test_data_file,
 			Map<String, Double> idfs) {
 		
-		System.err.println("Getting gamma in test: " +  model.getGamma());
-		System.err.println("Getting C in test:" + model.getCost());
 		
 		Map<Query,List<Document>> train_data = null;
 		Map<String, Map<String, Double>> rel_data = null;
